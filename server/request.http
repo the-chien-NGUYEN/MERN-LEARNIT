@@ -1,0 +1,56 @@
+POST http://localhost:5000/api/auth/register
+Content-Type:  application/json
+
+{
+    "username": "thechien",
+    "password": "123456"
+    
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type:  application/json
+
+{
+    "username": "thechien",
+    "password": "123456"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ2ZDQ2MzZjYjhhMDdlNmQyYTljZDUiLCJpYXQiOjE2MzIwNjIyMjh9.bOoK61KoyFHJ-phX5d0e9t0Yqnrp05sHMvfvNfG-ZuM
+
+{
+    "title": "My first post",
+    "description": "abc",
+    "url": "google.com",
+    "status": "LEARNING"
+}
+
+################################
+
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ2ZDQ2MzZjYjhhMDdlNmQyYTljZDUiLCJpYXQiOjE2MzIwNjIyMjh9.bOoK61KoyFHJ-phX5d0e9t0Yqnrp05sHMvfvNfG-ZuM
+
+################################
+
+PUT http://localhost:5000/api/posts/61474c9cc0d9b8da08bdfc6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ2ZDQ2MzZjYjhhMDdlNmQyYTljZDUiLCJpYXQiOjE2MzIwNjIyMjh9.bOoK61KoyFHJ-phX5d0e9t0Yqnrp05sHMvfvNfG-ZuM
+
+{
+    "title": "My first updated post",
+    "description": "Post updated successfully",
+    "url": "https://google.com",
+    "status": "LEARNING"
+}
+
+################################
+
+DELETE  http://localhost:5000/api/posts/61474c9cc0bd9b8da08bdfc6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ2ZDQ2MzZjYjhhMDdlNmQyYTljZDUiLCJpYXQiOjE2MzIwNjIyMjh9.bOoK61KoyFHJ-phX5d0e9t0Yqnrp05sHMvfvNfG-ZuM
